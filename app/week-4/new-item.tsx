@@ -53,7 +53,8 @@ export default function NewItem() {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          onBlur={() => setNameTouched(true)} // touched state (required)
+          onBlur={() => setNameTouched(true)}
+          onFocus={() => setNameTouched(false)}
           required
           className={`w-full border rounded p-2
             ${!nameIsValid && nameTouched ? "border-red-500" : "border-gray-300"}
